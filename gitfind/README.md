@@ -1,4 +1,4 @@
-# Desafio GitFind DIO
+# Desafio GitFind
 
 In the project directory, you can run:
 ### `npm start`
