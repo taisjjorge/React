@@ -1,5 +1,6 @@
 import React from "react";
 import { Counter } from "./components/Counter/Counter";
+import { AnotherOneCounter } from "./components/AnotherOneCounter/AnotherOneCounter";
 
 class App extends React.Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class App extends React.Component {
     
     this.state = {
       showCounter: false,
+      showAnotherCounter: false,
     }
   }
 
@@ -22,9 +24,19 @@ class App extends React.Component {
         >
           { this.state.showCounter ? "Ocultar" : "Mostrar"}
         </button>
-            
-        { this.state.showCounter && <Counter />}
         
+        { this.state.showCounter && <Counter />}
+       
+        <button 
+          style={{ marginTop: 20 }}
+          onClick={() => 
+            this.setState({ showAnotherCounter: !this.state.showAnotherCounter })
+          }
+        >
+          { this.state.showAnotherCounter ? "Ocultar Another One Counter" : "Another One Counter"}
+        </button>
+            
+        { this.state.showAnotherCounter && <AnotherOneCounter />}
       </div>
     );
   }
