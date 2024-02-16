@@ -5,8 +5,8 @@
 }
 
 #article img{
-    max-width: 250px;
-    width: 200%;
+    max-width: 350px;
+    /* width: 200%; */
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
