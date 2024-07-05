@@ -3,9 +3,11 @@ import { Header } from './components/Header/Header';
 import { Tasks } from './components/Tasks/Tasks';
 
 import './styles/global.css'
+import { Refs } from './components/Concepts/Refs';
+import { Memoization } from './components/Concepts/Memoization';
 
 function App() {
-  const [toggle, setToggle] = useState(false)
+  // const [toggle, setToggle] = useState(false)
 
   // useEffect(() => {
   //   console.log('Executa funcão de efeito')
@@ -21,9 +23,16 @@ function App() {
       <Header />
       <Tasks />
 
-      <button onClick={() => setToggle(!toggle)}>
+      <Memoization financialData={{
+        incomes: [50, 30, 20],
+        outcomes: [5, 8, 4]
+      }} />
+      
+      
+      {/* <Refs /> */}
+      {/* <button onClick={() => setToggle(!toggle)}>
         Toggle
-      </button>
+      </button> */}
     </>
   );
 }
